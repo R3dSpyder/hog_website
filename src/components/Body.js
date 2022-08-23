@@ -1,10 +1,7 @@
 import Routing from "./Routes/Routing";
 import { useState } from "react";
 import RouteList from "./Routes/RouteList";
-import NavBar from "./NavBar";
-import UI from "./UI";
 import AccoladeButton from "./AccoladeButton";
-import Page from "./Page";
 
 const Body = () => {
   const [page, setPage] = useState("/");

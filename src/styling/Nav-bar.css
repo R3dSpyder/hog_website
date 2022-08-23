@@ -37,7 +37,6 @@ nav {
 .nav-bar-item{
    display:flex;
             justify-content: center;
-            /* align-items: center; */
             padding-top: 2px;
             color: black;
             background-color: orange;
@@ -45,12 +44,8 @@ nav {
     padding: 10px 10px 10px 10px;
     border-right: 3px solid black;
     border-radius:20px;
-    /* margin-left:20px;
-    margin-right:20px; */
     margin-block-start: 25px;
-    /* margin-block-end: 20px; */
-
-
+  
 }
 .nav-bar-item:focus{
     background-color:Red;
@@ -64,20 +59,3 @@ nav {
   background-color:black;
 }
 
-/* .left-nav-bar {
-    display: grid;
-    width: 30%;
-    border-right: 3px solid black;
-
-}
-
-.middle-nav-bar {
-    display: grid;
-    border-right: 3px solid black;
-    width: 40%;
-}
-
-.right-nav-bar {
-     width: 30%;
-    display: grid;
-} */

@@ -1,5 +1,5 @@
 .cards {
-    /* margin-top:100px; */
+   
     display: grid;
     height: auto;
     font-size: 1.5em;
@@ -11,7 +11,7 @@
     padding-top: 5px;
     padding-bottom: 12px;
     width:auto;
-   /* overflow:hidden; */
+  
 
 }
 
@@ -21,7 +21,7 @@
 }
 
 .cards img {
-    /* size:80%; */
+
     left:10px;
     top:30px;
     height: fit-content;
@@ -30,23 +30,20 @@
     box-shadow: 5px 5px #888888;
 }
 
-/* .cards >*{
-    display:inline;
-    border:1px dotted black;
-} */
+
 
 
 .cards ul {
   height:fit-content;
   width:fit-content;
   padding-top:10px;
- /* margin-right:10px; */
+
   
     display: block;
    left: 50px;
   width:auto;
     position: abslolute;
-    /* height:2em; */
+
     margin-left: 8em;
 
 }
@@ -56,7 +53,7 @@
     display: block;
     right: 0;
     float: bottom;
-    /* margin-left: 80%; */
+ 
 }
 
 .cards p{
