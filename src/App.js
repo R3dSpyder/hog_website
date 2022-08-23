@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Component, React, useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import Routing from "./components/Routes/Routing.js";
+
+import Title from "./components/Title";
+import Footer from "./components/Footer";
+import Body from "./components/Body";
+import NavBar from "./components/NavBar";
+import { RetrieveReviews } from "./components/api";
+import RouteList from "./components/Routes/RouteList";
 
 function App() {
+  const [page, setPage] = useState("/");
+
+  RetrieveReviews();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <section className="wrapper">
+        <Title />
+        <NavBar />
+        <Body />
+        <Footer />
+      </section>
+    </BrowserRouter>
   );
 }
 

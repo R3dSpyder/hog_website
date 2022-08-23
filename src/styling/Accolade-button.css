@@ -1,0 +1,44 @@
+.accolade-board-button-frame {
+    position:absolute;
+    height: fit-content;
+    z-index:2;
+    display:inline-flex;
+    height:fit-content;
+    justify-content: center;
+    align-items:center;
+
+    /* width:fit-content; */
+    background: rgba(0, 0, 0, 0.9);
+    width:100%;
+ 
+    margin-left:auto;
+    margin-right:auto;
+    border-bottom: 2px solid brown;
+    /* padding-top:10px; */
+
+
+
+}
+
+.accolade-button {
+    margin:5px 5px 5px 5px;
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size:2.1em;
+    /* margin-bottom:20px; */
+    background-color: orange;
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+     
+
+
+    text-decoration: none;
+    border: 2px solid black;
+}
+
+.accolade-button:hover {
+    background-color: darkred;
+    border: 2px inset silver;
+}
