@@ -72,3 +72,7 @@
     border: 1px ridge grey;
 
 }
+
+.hidden{
+    display:none;
+}

@@ -23,7 +23,6 @@ export const RetrieveCategory = (category_name) => {
 };
 
 export const RetrieveCategoryList = () => {
-  console.log("in request");
   return axios
     .get(`https://hog-api-r3dspyder.herokuapp.com/api/categories`)
     .then((reply) => {

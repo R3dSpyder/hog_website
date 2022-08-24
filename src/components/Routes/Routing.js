@@ -7,11 +7,7 @@ const Routing = ({ RouteList }) => {
         <Routes>
           {RouteList.map((item) => {
             return (
-              <Route
-                exact
-                path={item.route}
-                element={<item.component />}
-              ></Route>
+              <Route exact path={item.route} element={item.element}></Route>
             );
           })}
         </Routes>

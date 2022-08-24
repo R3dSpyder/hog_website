@@ -1,0 +1,38 @@
+.review-object-container{
+    display:grid;
+    height:100%;
+    grid-template-rows: 30% 10% 60%;
+    grid-template-columns: 50% 50%;
+}
+
+.review-object-avatar-view{
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end:2
+}
+
+.review-object-profile-accolades {
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3
+}
+
+.review-object-review-plane {
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+        grid-column-end: 3
+}
+
+.review-object-discussion-plane{
+
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3
+}
