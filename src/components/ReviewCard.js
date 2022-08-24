@@ -2,7 +2,7 @@ import "../styling/Review-cards.css";
 
 export const ReviewCard = (object) => {
   const date = new Date(object.created_at).toString();
-  console.log(date);
+
   return (
     <div className="cards">
       <div>

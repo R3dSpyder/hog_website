@@ -6,7 +6,6 @@ const Routing = ({ RouteList }) => {
       <section>
         <Routes>
           {RouteList.map((item) => {
-            console.log(item.component);
             return (
               <Route
                 exact
