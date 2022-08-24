@@ -1,10 +1,10 @@
 import Landing from "../../pages/Landing";
 import Profile from "../Profile";
-import Home from "../../pages/Home";
+import Reviews from "../../pages/Reviews";
 
 const RouteList = [
   { route: "/", component: Landing },
-  { route: "home", component: Home },
+  { route: "/reviews", component: Reviews },
   { route: "home/profile", component: Profile },
 ];
 
