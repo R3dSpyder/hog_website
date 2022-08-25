@@ -13,3 +13,20 @@ export const GetParameters = (queries) => {
 
   return query;
 };
+
+export const formatDate = (date) => {
+  return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
+};
+
+export const formatTime = (date) => {
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let seconds = date.getSeconds();
+  hours = hours % 12 || 12;
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  seconds = seconds < 10 ? "0" + seconds : seconds;
+  date = date < 10 ? "0" + date : date;
+  const period = hours < 12 ? "AM" : "PM";
+
+  return hours + ":" + minutes + ":" + seconds + " " + period;
+};

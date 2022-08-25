@@ -35,5 +35,10 @@
 .Category-menu-items:hover{
     border: 4px inset grey;
     background-color: darkgrey;
+}
    
+.align-subnav-horizontal >*{
+    position:relative;
+   display:inline-flex;
+   justify-content:center;
 }

@@ -4,44 +4,39 @@ import { RetrieveCategory, RetrieveCategoryList } from "./api";
 import RouteList from "./Routes/RouteList";
 import { NavLink } from "react-router-dom";
 import Reviews from "../pages/Reviews";
-import { render } from "@testing-library/react";
+import "../styling/Nav-bar.css";
 
-const SubNav = ({ setHasParams }) => {
+//dynamic creation of the category list for the reviews subnav navigation tabs
+//sets each of their paths to :category which when navigated too causes a re-render of the forms page.
+
+const SubNav = () => {
   const [categoryList, setCagetoryList] = useState([]);
 
-  const setParams = () => {
-    setHasParams(true);
-  };
-
-  console.log(RouteList);
   useEffect(() => {
     if (categoryList.length === 0) {
       RetrieveCategoryList().then((result) => {
         const categories = result.map((category) => {
           RouteList.push({
-            route: `/reviews?category=${category}`,
+            route: `/${category}`,
             component: { Reviews },
           });
           return (
-            <NavLink
-              to={`/reviews?category=${category}`}
-              className="Category-menu-items"
-              onClick={setParams}
-            >
-              {category}
-            </NavLink>
+            <div className="nav-bar-item">
+              <NavLink to={`/${category}`} className="Nav-bar-link">
+                {category}
+              </NavLink>
+            </div>
           );
         });
-        console.log(categories, "<<");
         return setCagetoryList(categories);
       });
     }
   }, []);
 
   return (
-    <section className="Sub-nav-inner">
+    <div className="align-subnav-horizontal">
       <section>{categoryList.length > 0 ? categoryList : null} </section>
-    </section>
+    </div>
   );
 };
 export default SubNav;

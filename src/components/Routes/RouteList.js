@@ -1,11 +1,10 @@
-import Landing from "../../pages/Landing";
-import Profile from "../Profile";
 import Reviews from "../../pages/Reviews";
+import SingleReview from "../../pages/SingleReview";
 
 const RouteList = [
-  { route: "/", component: Landing },
-  { route: "/reviews", component: Reviews },
-  { route: "home/profile", component: Profile },
+  { route: "/", component: Reviews },
+  { route: "/:category", component: Reviews },
+  { route: "/review/:review", component: SingleReview },
 ];
 
 export default RouteList;

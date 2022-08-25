@@ -1,0 +1,90 @@
+.comment-cards-container {
+
+   display: flex;
+   height: fit-content;
+   padding:10px 10px 10px 10px;
+    font-size: 1em;
+    /* position: relative; */
+    color:white;
+    /* margin-top:20px; */
+    border: 1px white dashed;
+  
+
+}
+
+
+/* .comment-cards img {
+
+  
+    position: absolute;
+    border: 2px ridge silver;
+    box-shadow: 5px 5px #888888;
+} */
+
+.relative-position-single-comment {
+  
+    height: 20%;
+    overflow: scroll;
+  
+    display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+}
+
+
+/* .comment-cards ul {
+    height: fit-content;
+    width: fit-content;
+    padding-top: 10px;
+
+
+    display: block;
+    left: 50px;
+    width: auto;
+    position: abslolute;
+
+    margin-left: 8em;
+
+} */
+
+/* .comment-cards span {
+    position: abslolute;
+    display: block;
+    right: 0;
+    float: bottom;
+
+} */
+
+.comment-cards p {
+    width: 95%;
+    /* margin-right: 20px; */
+}
+
+.user-interaction {
+    margin-top: 5px;
+    width: auto;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    border: 1px ridge grey;
+
+}
+
+.hidden {
+    display: none
+}
+
+#userName{ margin-left:20px;} 
+
+#body-of-comment {
+
+    margin-left: 40px;
+}
+
+#dateTime{display: flex;
+ 
+    margin-left: 90px;}
