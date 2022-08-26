@@ -1,5 +1,5 @@
 import "../styling/Review-cards.css";
-import { useNavigate } from "react-router-dom";
+
 import { NavLink } from "react-router-dom";
 
 // Only selected data from the review object is used to display the review.
@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 
 export const ReviewCard = (object) => {
   return (
-    <NavLink to={`/review/${object.review_id}`} className="cards">
+    <NavLink to={`/reviews/review/${object.review_id}`} className="cards">
       <div>
         <img src={object.review_img_url} height="100px" width="100px" />
 

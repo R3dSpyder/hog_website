@@ -6,13 +6,14 @@
 }
 
 .wrapper {
-  height: 100%;
+  max-height: 100%;
   background: rgba(0, 0, 0, 0.9);
   display: grid;
   grid-template-columns: auto;
   grid-template-rows:10% 5% 80% 5%;
   min-height: 0;
   min-width: 0;
+  overflow:scroll;
 
 }
 
@@ -32,6 +33,7 @@ header {
 grid-row-start: 2;
 grid-row-end: 3;
   background: rgba(0, 0, 0, 0.9);
+  border:0.5px solid gold;
 
 border-radius: 20px;
 margin-left:auto;
@@ -39,8 +41,7 @@ margin-right:auto;
 }
 
 .app-main-body{
- 
-   height:auto;
+  height:100%;
   overflow: scroll;
   grid-row-start: 3;
   grid-row-end: 4;
