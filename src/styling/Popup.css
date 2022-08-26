@@ -1,0 +1,58 @@
+.popup{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100%;
+    margin-top:0;
+    display:block;
+    justify-content:center;
+ margin-left: 900px;
+ width:1000px;
+    position:absolute;
+    height:350px;
+    background-color:red;
+    border:2px solid black;
+
+}
+
+#popup-container{
+
+    height:fit-content;
+}
+
+#image{
+    width:fit-content;
+    margin-left:400px;
+    display:flex;
+    justify-content:center;
+    border:2px inset silver;
+}
+
+#center-form {
+    display: block;
+    justify-content: center;
+}
+
+#username{
+    margin-left:270px;
+    font-size:3em;
+}
+
+#message{
+    font-size:1.7em;
+   width:100%;
+   height:100px;
+}
+
+#submit-button-popup {
+    display:flex;
+    justify-content:center;
+font-size:2em;
+    height:fit-content;
+    margin-bottom: 20px;
+
+}
+#submit-button-popup button{
+    font-size:1.2em;
+    bottom: 20px;
+}

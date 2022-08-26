@@ -1,0 +1,183 @@
+.focused-review-container{
+display: grid;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-template-rows: 20% 10% 15% auto;
+    grid-gap:3px;
+    overflow: scroll;
+background: rgba(0, 0, 0, 0.9);
+    align-items: start;
+}
+
+.focused-review-avatar-area{
+    display:inline-flex;
+    position:relative;
+    height:100%;
+    justify-content:center;
+    align-items:center;
+    grid-row-start:1;
+    grid-row-end:2;
+    background:black;
+    color:white;
+    border:1px solid orangered
+  
+
+
+}
+
+.focused-review-score-plane{
+    display:flex;
+    color:black;
+    background-color:whitesmoke;
+    justify-content:center;
+    align-items: center;
+ 
+    grid-row-start: 2;
+    grid-row-end: 3;
+    font-size:4.3em;
+    background: -webkit-linear-gradient(left, orange, yellow, green, cyan, blue, violet);
+        background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+        background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+        background: linear-gradient(to right, orange, yellow, green, cyan, blue, violet);
+    border: 2px outset silver;
+}
+.focused-review-review-plane{
+
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    background:darkred;
+   
+    
+}
+
+
+#upvote{
+
+
+background-color: aquamarine;
+height:fit-content;
+border: 5px outset black;
+padding: 2px 2px 2px 2px;
+margin-left:15px;
+
+
+}
+
+#upvote-span{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+#downvote-span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:10px;
+    background:blue;
+}
+#upvote:hover{
+    background-color:green 
+}
+#upvote:focus {
+    background-color: green;
+    border: 5px inset black;
+}
+
+#upvote:disabled {
+    background-color: green;
+    border: 5px inset black;
+}
+#downvote:focus {
+    background-color: orange;
+    border: 5px inset black;
+}
+
+#downvote:disabled {
+    background-color: orange;
+    border: 5px inset black;
+}
+#downvote{
+height:fit-content;
+background-color: aquamarine;
+border: 5px outset black;
+padding: 2px 2px 2px 2px;
+margin-right:15px;
+}
+#downvote:hover{
+    background-color:orange;
+}
+
+
+
+#userName{
+    font-size:4em;
+}
+
+#title-container{
+    display:block;
+  height:fit-content;
+
+  justify-content: space-between;
+
+
+}
+
+#title-container p{
+margin-bottom: 10px;
+margin-left:10px;
+}
+#title{
+    /* display:float;
+    float:bottom;
+    margin-bottom:0; */
+/* position: absolute;
+top:100px;
+right:30%; */
+
+  
+   
+    font-size: 2em;
+}
+.focused-review-comment-plain {
+
+    display:block;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    background: purple;}
+
+.single-review-text.fixed{background-color:red;}
+
+
+/* h2{font-size:4em; position:absolute;top:0;margin-left:10px;}
+
+h3{font-size:2.5em;margin-top:100px;
+} */
+
+
+#vote-button-container{display:flex; size:fit-content;}
+
+.review-inner-label-container{
+   
+}
+.review-inner-label-container span{
+    font-size:1.4em;
+    color:black;
+    background-color:gold;
+    margin-right:10px;
+    margin-bottom:10px;
+    border: 2px outset darkred;
+    box-shadow: 2px 2px red;
+    margin-bottom:20px;
+}
+
+#dateTime{
+
+    /* display:flex;
+    justify-content:center; */
+}
+
+#voteText{font-size:1.7em; height:fit-content;}

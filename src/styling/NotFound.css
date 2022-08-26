@@ -1,0 +1,32 @@
+.error{font-size: 8em; color:beige}
+
+.error img{
+    margin-left:50%;
+}
+#error-message-and-pic{
+    margin-top:200px;
+    display:block;
+    height:fit-content;
+    justify-content:center;
+    align-items:center;
+  
+}
+
+#error-message-and-pic img{
+    margin-left:40%;
+}
+
+#error-message-and-pic p{
+  
+    margin-left:200px;
+}
+
+.go-home{
+    margin-top: 2em;;
+    text-decoration:none;
+    margin-left:42%;
+    background-color:darkred;
+    color:white;
+    font-size:3em;
+
+}

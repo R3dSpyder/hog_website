@@ -1,0 +1,80 @@
+.reviews-container {
+
+    display: grid;
+    grid-row-start:3;
+    grid-row-end:4;
+    grid-template-rows: 5% 95%;
+    overflow:scroll;
+}
+
+
+.SubNav {
+    font-size: 2em;
+    height:100%;
+    position: relative;
+    background: rgba(0, 0, 0, 0.9);
+    /* width: fit-content;
+    height: fit-content; */
+    grid-row-start: 1;
+   grid-row-end:2
+
+}
+.Review-plane {
+    height:100%;
+    margin-top:40px;
+    display:block;
+    position:relative;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+
+.Category-menu-items{
+  
+    color: white;
+    background-color:grey;
+    margin-right:20px;
+    margin-left: 2px;
+    border: 4px outset grey;
+    padding-left:5px;
+}
+.Category-menu-items:hover{
+    border: 4px inset grey;
+    background-color: darkgrey;
+}
+   
+.align-subnav-horizontal >*{
+    position:relative;
+   display:inline-flex;
+   justify-content:center;
+}
+
+#make-comment-button-plane{
+    height:2em;display:flex; 
+    justify-content:center;
+    align-items:center;
+    /* position:sticky; 
+    top:0; */
+
+    font-size:2em; 
+    color:white; }
+
+#make-comment-button-plane button{
+    background-color:gold;
+border: 4px outset silver;
+border-radius: 80%;}
+
+#make-comment-button-plane button:hover{
+    /* background: -webkit-linear-gradient(left, orange, yellow, green, cyan, blue, violet);
+        background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+        background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+        background: linear-gradient(to right, orange, yellow, green, cyan, blue, violet); */
+
+}
+#make-comment-button-plane button:active{
+    background: -webkit-linear-gradient(left, orange, yellow, green, cyan, blue, violet);
+        background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+        background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+        background: linear-gradient(to right, orange, yellow, green, cyan, blue, violet);
+       border: 4px inset silver
+}

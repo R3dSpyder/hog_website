@@ -1,6 +1,7 @@
 .main-body-container{
-    display:block;
-    max-height:fit-content;
+    position:fixed;
+    display:flex;
+   height:10%;
     overflow: scroll;
     
 }

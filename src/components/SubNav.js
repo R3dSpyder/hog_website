@@ -5,6 +5,7 @@ import RouteList from "./Routes/RouteList";
 import { NavLink } from "react-router-dom";
 import Reviews from "../pages/Reviews";
 import "../styling/Nav-bar.css";
+import { UserContext } from "./ContextProvider";
 
 //dynamic creation of the category list for the reviews subnav navigation tabs
 //sets each of their paths to :category which when navigated too causes a re-render of the forms page.
@@ -17,12 +18,12 @@ const SubNav = () => {
       RetrieveCategoryList().then((result) => {
         const categories = result.map((category) => {
           RouteList.push({
-            route: `/${category}`,
+            route: `/reviews/${category}`,
             component: { Reviews },
           });
           return (
             <div className="nav-bar-item">
-              <NavLink to={`/${category}`} className="Nav-bar-link">
+              <NavLink to={`/reviews/${category}`} className="Nav-bar-link">
                 {category}
               </NavLink>
             </div>
