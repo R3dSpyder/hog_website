@@ -14,7 +14,7 @@ function App() {
     <BrowserRouter>
       <section className="wrapper">
         <Title />
-        <NavBar />
+        {/* <NavBar /> */}
         <Body />
         <Footer />
       </section>

@@ -2,55 +2,53 @@ import { useState, useEffect } from "react";
 import { RetrieveReviews, RetrieveCategory } from "../components/api";
 import { ReviewCard } from "../components/ReviewCard";
 import SubNav from "../components/SubNav";
-import "../styling/Page.css";
 import "../styling/SubNav.css";
-import { GetLocation, GetParameters } from "../HelperComponents";
 import ErrorPage from "./ErrorPage";
+import { useParams } from "react-router-dom";
+
+// review page and review subnav work together. If the URL parameters change owing to clicking on a subnav link
+// then reviews term will update itself and use the path in the url as the search term against the database.
+// each review is displayed using a review card.
 
 const Reviews = () => {
-  const parameters = GetParameters(["category"]);
-
-  const [reviews, setReviewItems] = useState();
-  const [hasParams, setHasParams] = useState("");
+  const { category } = useParams();
+  const [loadAllReviews, isLoadingAllReviews] = useState(true);
+  const [reviewsToDisplay, setReviewsToDisplay] = useState([]);
 
   useEffect(() => {
-    console.log(parameters, "param on first load");
-    if (parameters[0] === null) {
+    if (loadAllReviews) {
       RetrieveReviews().then((result) => {
-        const mapped = result.map((item) => {
+        const makeCards = result.map((item) => {
           const card = ReviewCard(item);
-
           return card;
         });
-
-        return setReviewItems(mapped);
+        isLoadingAllReviews(false);
+        return setReviewsToDisplay(makeCards);
       });
     }
   }, []);
 
   useEffect(() => {
-    if (parameters[0] !== null) {
-      const parameter = parameters[0];
-      RetrieveCategory([parameter]).then((result) => {
-        const mapped = result.map((item) => {
+    if (category !== undefined) {
+      RetrieveCategory(category).then((result) => {
+        const makeCards = result.map((item) => {
           const card = ReviewCard(item);
-          setHasParams(false);
           return card;
         });
-
-        return setReviewItems(mapped);
+        return setReviewsToDisplay(makeCards);
       });
     }
-  }, [hasParams]);
+  }, [category]);
 
   return (
     <div className="position-content-with-subnav">
       <section className="SubNav">
-        <SubNav setReviewItems={setReviewItems} setHasParams={setHasParams} />
+        <SubNav />
       </section>
       <section className="ReviewCards">
-        <br />
-        <section>{reviews !== undefined ? reviews : <ErrorPage />}</section>
+        <section>
+          {reviewsToDisplay !== undefined ? reviewsToDisplay : <ErrorPage />}
+        </section>
       </section>
     </div>
   );
